@@ -3,6 +3,6 @@
  */
 require.config({
     paths : {
-        'jquery' : '//cdn.bootcss.com/jquery/1.11.1/jquery.min.js'
+        'jquery' : '//cdn.bootcss.com/jquery/1.11.1/jquery.min'
     }
 })

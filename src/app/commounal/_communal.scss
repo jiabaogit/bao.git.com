@@ -1,0 +1,79 @@
+@charset "UTF-8";
+@mixin verCenterPx($height){
+  height: #{$height}px;
+  line-height: #{$height}px;
+}
+@mixin setWdHgPx($width,$height){
+  width: #{$width}px;
+  height: #{$height}px;
+}
+@mixin border($color,$size:1px){
+  border: $size solid $color;
+}
+
+@mixin setPosition($top:0,$right:0,$bottom:0,$left:0){
+  top: #{$top}px;
+  right: #{$right}px;
+  bottom: #{$bottom}px;
+  left: #{$left}px;
+}
+@mixin css3($key,$value){
+  -o-#{$key} : $value;
+  -ms-#{$key} : $value;
+  -moz-#{$key}: $value;
+  -webkit-#{$key} : $value;
+  #{$key} : $value;
+
+  // 兼容css3 flex布局
+  @if $key == 'justify-content'{
+    -webkit-box-pack: $value;
+    -ms-flex-pack: $value;
+  }
+  @if $key == 'align-items' and $value == 'center'{
+    -webkit-box-align : $value;
+  }
+  @if $key == 'align-items' and $value == 'flex-end'{
+    -webkit-box-align : end;
+    -ms-flex-align : end;
+    -ms-grid-row-align : end;
+  }
+  @if $key == 'flex-grow' {
+    -webkit-box-flex: $value;
+    -ms-flex-positive : $value;
+  }
+  @if $key == 'flex-direction' and $value == 'column'{
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+  }
+  @if $key == 'flex-direction' and $value == 'row'{
+    -webkit-box-direction:normal;
+    -webkit-box-orient:horizontal;
+  }
+}
+@mixin opacity($opacity){
+  opacity: $opacity;
+  filter:alpha(opacity=($opacity*100));/*proprietary  IE  code */
+}
+//flex布局
+@mixin flex(){
+  display: -webkit-box; // 兼容安卓uc浏览器
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+}
+/* keyframes 动画*/
+@mixin keyframes ($animationName){
+  @keyframes #{$animationName} {
+    @content;
+  }
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+}
+
