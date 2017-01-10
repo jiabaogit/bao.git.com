@@ -25,7 +25,9 @@ html,body{-webkit-text-size-adjust: 100%;-webkit-tap-highlight-color: rgba(0, 0,
 .overHide{overflow: hidden;}
 
 /*加载层*/
+$second : 1.6s;
 .loading{
+  @include css3(perspective,2000px);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -33,9 +35,8 @@ html,body{-webkit-text-size-adjust: 100%;-webkit-tap-highlight-color: rgba(0, 0,
   right: 0;
   background: #00af95;
   .anima{
-    @include flex;
-    @include css3(align-items,center);
-    @include setWdHgPx(300,50);
+    @include css3(transform-style,preserve-3d);
+    @include setWdHgPx(119,100);
     position: absolute;
     left: 0;
     right: 0;
@@ -43,26 +44,55 @@ html,body{-webkit-text-size-adjust: 100%;-webkit-tap-highlight-color: rgba(0, 0,
     bottom: 0;
     margin: auto;
     .circle{
-      @include css3(animation,circlebig 1s infinite);
-      @include setWdHgPx(50,50);
+      @include css3(animation,circlechange $second*4 linear infinite);
+      @include css3(transform,rotateY(0deg) translateZ(500px));
+      @include setWdHgPx(100,100);
+      @include flex;
+      @include css3(align-items,center);
+      @include css3(justify-content,center);
+      position: absolute;
+      top: 0;
+      left: 0;
       margin: 0 10px;
       background: #fff;
       border-radius: 50%;
+      font-size: 20px;
+    }
+    .circle0{
+      @include css3(animation-delay,0.2s);
+      z-index: 9;
     }
     .circle1{
-      @include css3(animation-delay,0.1s);
+      @include css3(animation-delay,$second*1);
+      z-index: 8
     }
     .circle2{
-      @include css3(animation-delay,0.2s);
+      @include css3(animation-delay,$second*2);
+      z-index: 7;
     }
     .circle3{
-      @include css3(animation-delay,0.3s);
+      @include css3(animation-delay,$second*3);
+      z-index: 6;
     }
     .circle4{
-      @include css3(animation-delay,0.4s);
+      @include css3(animation-delay,$second*4);
+      z-index: 5;
     }
     .circle5{
-      @include css3(animation-delay,0.5s);
+      @include css3(animation-delay,$second*5);
+      z-index: 4;
+    }
+    .circle6{
+      @include css3(animation-delay,$second*6);
+      z-index: 3;
+    }
+    .circle7{
+      @include css3(animation-delay,$second*7);
+      z-index: 2;
+    }
+    .circle8{
+      @include css3(animation-delay,$second*8);
+      z-index: 1;
     }
   }
 }
@@ -76,5 +106,13 @@ html,body{-webkit-text-size-adjust: 100%;-webkit-tap-highlight-color: rgba(0, 0,
   }
   100%{
     @include setWdHgPx(50,50);
+  }
+}
+@include keyframes(circlechange){
+  from {
+    @include css3(transform,rotateY(0deg) translateZ(500px))
+  }
+  to{
+    @include css3(transform,rotateY(360deg) translateZ(500px))
   }
 }

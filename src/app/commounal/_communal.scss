@@ -18,9 +18,6 @@
   left: #{$left}px;
 }
 @mixin css3($key,$value){
-  -o-#{$key} : $value;
-  -ms-#{$key} : $value;
-  -moz-#{$key}: $value;
   -webkit-#{$key} : $value;
   #{$key} : $value;
 
