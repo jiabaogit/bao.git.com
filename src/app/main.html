@@ -17,7 +17,7 @@
     </script>
 </head>
 <body>
-    <div class="loading">
+    <div class="loading hide">
         <ul class="anima">
             <li class="circle circle0">邀</li>
             <li class="circle circle1">您</li>
@@ -27,106 +27,40 @@
 
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="ready hide">
-        <h3 class="text-center">个人简历</h3>
-        <dl class="main">
-            <dt>基本信息</dt>
-            <dt>
+    <div class="ready">
+        <h3 class="text-center h3">个人简历</h3>
+        <dl class="m-main">
+            <dt class="main-tit">基本信息</dt>
+            <dd class="main-cont">
                 <ol>
                     <li>名字:曾嘉宝</li>
                     <li>性别:女</li>
-                    <li>常住地:广州</li>
+                    <li><address>常住地:广州</address></li>
                     <li>出生日:1993年7月16日</li>
+                    <li>手机：13929564427</li>
+                    <li>面试岗位：前端开发工程师</li>
                     <li>毕业院校(专业):本科 广东工业大学(计算机学院软件工程)</li>
                 </ol>
-            </dt>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <dt>技术栈</dt>
-            <dd>
+            </dd>
+        </dl>
+        <dl class="m-main">
+            <dt class="main-tit">技术栈</dt>
+            <dd class="main-cont">
                 <ol>
                     <li>熟悉html，css，JavaScript，TypeScript，markdown，es5和es6语法标准，flex布局</li>
                     <li>熟练使用angularjs开发单页面应用，包括pc端和移动端，熟悉并灵活运用angular1各种高级功能</li>
                     <li>熟练使用requirejs模块化开发项目</li>
                     <li>熟练使用sass预编译css</li>
-                    <li>熟练使用gulp各种插件处理项目文件</li>
+                    <li>熟练使用gulp工作流处理项目文件</li>
                     <li>熟练nodejs，ruby的安装，npm的使用</li>
                     <li>了解angular2框架，有一定的模块化开发思维</li>
                     <li>了解ionic框架</li>
                 </ol>
             </dd>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <dt></dt>
-            <dt>工作经验</dt>
-            <dd>
+        </dl>
+        <dl class="m-main">
+            <dt class="main-tit">工作经验</dt>
+            <dd class="main-cont">
                 <ul>
                     <li>
                         <span>2015年1月 ~ 至今</span>
@@ -134,30 +68,26 @@
                         <span>前端开发工程师</span>
                     </li>
                     <li>
-                        <ol>
-                            <li>
-                                管理后台（共5个项目）：
-                                <ol>
-                                    <li>项目简介：其中3个是为网站、手机商城等前端页面配置数据，管理人员处理订单，管理用户的平台。<br>
-                                        其中两个是公司外包项目，为天弘公司做生成合同，模板录入，风控，通知等功能。
-                                    </li>
-                                    <li>心得：①有四个项目是自己独立完全开发的，均使用angularjs1+bootstrap+jquery技术，深入理解angularjs的高级功能的使用</li>
-                                    <li>②做银行系统时，多种的状态的判断以及复杂的业务</li>
-                                </ol>
-                            </li>
-                            <li>
-                                手机端网页商城：
-                            </li>
-                            <li>
-                                公司主页（响应式开发）：
-                            </li>
-                            <li>用bootstrap+angularjs+jquery开发三个以上管理系统,实现分页显示,文件上传到oss,权限控制等功能</li>
-                            <li>用requirejs+jquery开发公司主页和活动页.<br>
-                                http://www.ipaai.com/appweb/view/main.html<br>
-                                http://act.simoo.cn/simoowxWeb/views/main.html
-                            </li>
-                            <li>与app交互,完成app内嵌网页</li>
-                        </ol>
+                        <dl>
+                            <dt><a href="http://act.simoo.cn/webapp/">无线端网页商城</a></dt>
+                            <dd>简介：这是一个集支付、日期选择、图片展示、上传图片到oss、微信分享等功能于一体的约拍平台，既能单独成为一个商城，也能内嵌到app中交互使用。</dd>
+                            <dd>负责：独立搭建整个angular框架，通过统一配置route，实现项目完全模块化，编写公用指令服务，如封装ajax，页面回退，代码本地缓存，图片大小统一处理等，使其他开发人员更加便捷、专注、快速地开发。</dd>
+                            <dd>使用到的技术：angularjs，jquery，css3，html5，sass</dd>
+                            <dd>Workflow：Git，Gulp</dd>
+
+                            <dt><a href="http://act.simoo.cn/">公司主页</a></dt>
+                            <dd>简介：这是一个响应式布局网页，根据屏幕大小会展示pc端和无线端两套页面设计。页面涉及有flex布局以及css3动画，适应现主流的各种手机浏览器。</dd>
+                            <dd>负责：完全独立开发，基本不涉及后台逻辑处理。使用requirejs进行项目模块化开发，css3做页面动画。</dd>
+                            <dd>使用到的技术：requirejs，jquery，css3，html5，sass</dd>
+                            <dd>Workflow：Git，Gulp</dd>
+
+                            <dt>后台管理系统</dt>
+                            <dd>简介：为管理人员提供舒适的管理系统，定制商城的内容和订单管理。</dd>
+                            <dd>负责：整体架构设计，页面设计以及逻辑处理</dd>
+                            <dd>使用到的技术：angularjs，jquery</dd>
+                            <dd>Workflow：Git，Gulp</dd>
+
+                        </dl>
                     </li>
                 </ul>
             </dd>

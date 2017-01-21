@@ -1,7 +1,7 @@
 @import "commounal/_communal.scss";
 @charset "utf-8";
-*{margin:0;padding:0}
-body{font-family:"Microsoft YaHei","宋体",sans-serif;background-color: #f2f2f2;font-size:13px;font-weight: normal;}
+*{margin:0;padding:0;box-sizing: border-box;}
+body{font-family:"Microsoft YaHei","宋体",sans-serif;font-size:13px;font-weight: normal;}
 ul,li{list-style-type:none;margin: 0px;}
 body a{color:#787878;text-decoration:none;cursor: pointer;font-size: 14px;}
 body a:hover{color:#00af95;}
@@ -115,4 +115,23 @@ $second : 1.6s;
   to{
     @include css3(transform,rotateY(360deg) translateZ(500px))
   }
+}
+
+
+/*简历部分*/
+.h3{
+  line-height: 50px;
+  
+}
+.ready{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.m-main{
+    @include flex;
+    @include css3(align-items,center);
+    margin-bottom: 20px;
+}
+.main-tit{
+    width: 200px;
 }
