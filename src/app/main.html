@@ -8,53 +8,52 @@
 
     <link rel="stylesheet" href="../assets/css/main.css">
 
-    <script src="../assets/js/require.js"></script>
-    <script src="../assets/js/path.js"></script>
-    <script>
-        require(['main'],function(){
 
-        })
-    </script>
 </head>
 <body>
-    <div class="loading hide">
-        <ul class="anima">
-            <li class="circle circle0">邀</li>
-            <li class="circle circle1">您</li>
-            <li class="circle circle2">欣</li>
-            <li class="circle circle3">赏</li>
-        </ul>
+    <div class="loading">
+        <div class="anima">
+           <span class="circle circle0"></span>
+           <span class="circle circle1"></span>
+           <span class="circle circle2"></span>
+        </div>
 
     </div>
 
     <div class="ready">
-        <h3 class="text-center h3">个人简历</h3>
+        <h3 class="text-center h3-name">曾嘉宝（女）</h3>
+
+        <aside class="self-info pad-more">
+            <span>tel:<a href="tel:13929564427">13929564427</a></span>
+            <span>email:1226953129@qq.com</span>
+            <span>github:<a href="https://github.com/jiabaogit">https://github.com/jiabaogit</a></span>
+        </aside>
+
         <dl class="m-main">
-            <dt class="main-tit">基本信息</dt>
-            <dd class="main-cont">
-                <ol>
-                    <li>名字:曾嘉宝</li>
-                    <li>性别:女</li>
-                    <li><address>常住地:广州</address></li>
-                    <li>出生日:1993年7月16日</li>
-                    <li>手机：13929564427</li>
-                    <li>面试岗位：前端开发工程师</li>
-                    <li>毕业院校(专业):本科 广东工业大学(计算机学院软件工程)</li>
-                </ol>
+            <dt class="main-tit bold">申请职位</dt>
+            <dd class="main-cont bold">前端开发工程师</dd>
+        </dl>
+
+        <dl class="m-main">
+            <dt class="main-tit">教育背景</dt>
+            <dd class="main-cont self-info pad-more">
+                <span>广东工业大学</span>
+                <span>软件工程</span>
+                <span>本科</span>
+                <span>2011级</span>
             </dd>
         </dl>
         <dl class="m-main">
             <dt class="main-tit">技术栈</dt>
             <dd class="main-cont">
-                <ol>
-                    <li>熟悉html，css，JavaScript，TypeScript，markdown，es5和es6语法标准，flex布局</li>
-                    <li>熟练使用angularjs开发单页面应用，包括pc端和移动端，熟悉并灵活运用angular1各种高级功能</li>
-                    <li>熟练使用requirejs模块化开发项目</li>
-                    <li>熟练使用sass预编译css</li>
-                    <li>熟练使用gulp工作流处理项目文件</li>
-                    <li>熟练nodejs，ruby的安装，npm的使用</li>
-                    <li>了解angular2框架，有一定的模块化开发思维</li>
-                    <li>了解ionic框架</li>
+                <ol class="starlist">
+                    <li><span class="star"></span>熟悉html，css，JavaScript，TypeScript，es5和es6语法标准，flex布局，能够编写规范并具有良好兼容性的 HTML 页面</li>
+                    <li><span class="star"></span>熟练使用angularjs开发单页面应用，包括pc端和移动端，熟悉并灵活运用angular1各种高级功能</li>
+                    <li><span class="star"></span>熟练使用requirejs模块化开发项目</li>
+                    <li><span class="star"></span>熟练使用sass预编译css</li>
+                    <li><span class="star"></span>熟练使用gulp工作流处理项目文件</li>
+                    <li><span class="star"></span>对nodejs，ruby，npm有一定的了解</li>
+                    <li><span class="star"></span>了解angular2框架，有一定的组件化开发思维</li>
                 </ol>
             </dd>
         </dl>
@@ -62,34 +61,79 @@
             <dt class="main-tit">工作经验</dt>
             <dd class="main-cont">
                 <ul>
-                    <li>
+                    <li class="bold self-info">
                         <span>2015年1月 ~ 至今</span>
                         <span>深圳爱拍科技有限公司</span>
                         <span>前端开发工程师</span>
                     </li>
                     <li>
-                        <dl>
-                            <dt><a href="http://act.simoo.cn/webapp/">无线端网页商城</a></dt>
-                            <dd>简介：这是一个集支付、日期选择、图片展示、上传图片到oss、微信分享等功能于一体的约拍平台，既能单独成为一个商城，也能内嵌到app中交互使用。</dd>
-                            <dd>负责：独立搭建整个angular框架，通过统一配置route，实现项目完全模块化，编写公用指令服务，如封装ajax，页面回退，代码本地缓存，图片大小统一处理等，使其他开发人员更加便捷、专注、快速地开发。</dd>
-                            <dd>使用到的技术：angularjs，jquery，css3，html5，sass</dd>
-                            <dd>Workflow：Git，Gulp</dd>
+                        <dl class="listwrap">
+                            <dt class="emtit"><a href="http://act.simoo.cn/webapp/">无线端网页商城</a></dt>
+                            <dd>
+                                <span>简介：</span>
+                                <aside>这是一个集支付、日期选择、图片展示、上传图片到oss、微信分享等功能于一体的约拍平台，既能单独成为一个商城，也能内嵌到app中交互使用。</aside>
+                            </dd>
+                            <dd>
+                                <span>负责：</span>
+                                <aside>独立搭建整个angular框架，通过统一配置route，实现项目完全模块化，编写公用指令服务，如封装ajax，页面回退，代码本地缓存，图片大小统一处理等，使其他开发人员更加便捷、专注、快速地开发。</aside>
+                            </dd>
+                            <dd>
+                                <span>使用到的技术：</span>
+                                <aside>angularjs，jquery，css3，html5，sass</aside>
+                            </dd>
+                            <dd>
+                                <span>Workflow：</span>
+                                <aside>Git，Gulp</aside>
+                            </dd>
 
-                            <dt><a href="http://act.simoo.cn/">公司主页</a></dt>
-                            <dd>简介：这是一个响应式布局网页，根据屏幕大小会展示pc端和无线端两套页面设计。页面涉及有flex布局以及css3动画，适应现主流的各种手机浏览器。</dd>
-                            <dd>负责：完全独立开发，基本不涉及后台逻辑处理。使用requirejs进行项目模块化开发，css3做页面动画。</dd>
-                            <dd>使用到的技术：requirejs，jquery，css3，html5，sass</dd>
-                            <dd>Workflow：Git，Gulp</dd>
+                            <dt class="emtit"><a href="http://act.simoo.cn/">公司主页</a></dt>
+                            <dd>
+                                <span>简介：</span>
+                                <aside>这是一个响应式布局网页，根据屏幕大小会展示pc端和无线端两套页面设计。页面涉及有flex布局以及css3动画，适应现主流的各种手机浏览器。</aside>
+                            </dd>
+                            <dd>
+                                <span>负责：</span>
+                                <aside>完全独立开发，基本不涉及后台逻辑处理。使用requirejs进行项目模块化开发，css3做页面动画。</aside>
+                            </dd>
+                            <dd>
+                                <span>使用到的技术：</span>
+                                <aside>requirejs，jquery，css3，html5，sass</aside>
+                            </dd>
+                            <dd>
+                                <span>Workflow：</span>
+                                <aside>Git，Gulp</aside></dd>
 
-                            <dt>后台管理系统</dt>
-                            <dd>简介：为管理人员提供舒适的管理系统，定制商城的内容和订单管理。</dd>
-                            <dd>负责：整体架构设计，页面设计以及逻辑处理</dd>
-                            <dd>使用到的技术：angularjs，jquery</dd>
-                            <dd>Workflow：Git，Gulp</dd>
+                            <dt class="emtit">后台管理系统</dt>
+                            <dd>
+                                <span>简介：</span>
+                                <aside>为管理人员提供舒适的管理系统，定制商城的内容和订单管理。</aside>
+                            </dd>
+                            <dd>
+                                <span>负责：</span>
+                                <aside>整体架构设计，页面设计以及逻辑处理</aside>
+                            </dd>
+                            <dd>
+                                <span>使用到的技术：</span>
+                                <aside>angularjs，jquery</aside>
+                            </dd>
+                            <dd>
+                                <span>Workflow：</span>
+                                <aside>Git，Gulp</aside>
+                            </dd>
 
                         </dl>
                     </li>
                 </ul>
+            </dd>
+        </dl>
+        <dl class="m-main">
+            <dt class="main-tit">自我评价</dt>
+            <dd class="main-cont">
+                <ol class="starlist">
+                    <li><span class="star"></span>性格乐观，具有较好的抗压能力。</li>
+                    <li><span class="star"></span>公司初期前端独立开发，有较好的自学能力，遇到问题都能自我解决。</li>
+                    <li><span class="star"></span>有培训新手的经验，有较好的沟通能力。</li>
+                </ol>
             </dd>
         </dl>
     </div>

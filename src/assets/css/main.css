@@ -2,15 +2,17 @@
 /* keyframes 动画*/
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body { font-family: "Microsoft YaHei","宋体",sans-serif; font-size: 13px; font-weight: normal; }
+body { font: normal 14px "Microsoft YaHei","宋体",sans-serif; }
 
-ul, li { list-style-type: none; margin: 0px; }
+ul, li { list-style-type: none; margin: 0px; line-height: 18px; }
 
-body a { color: #787878; text-decoration: none; cursor: pointer; font-size: 14px; }
+body a { color: #8bc0f4; text-decoration: none; cursor: pointer; font-size: 14px; }
 
-body a:hover { color: #00af95; }
+body a:hover { color: #8bc0f4; }
 
-body a:visited { color: #787878; }
+body a:active { color: #8bc0f4; }
+
+body a:visited { color: #8bc0f4; }
 
 img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
 
@@ -42,82 +44,98 @@ html, body { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transp
 
 .overHide { overflow: hidden; }
 
+.bold { font-weight: bold; font-size: 16px; line-height: 25px; }
+
 /*加载层*/
-.loading { -webkit-perspective: 2000px; perspective: 2000px; position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: #00af95; }
+.loading { -webkit-perspective: 500px; perspective: 500px; -webkit-animation: displayhide 2s linear forwards; animation: displayhide 2s linear forwards; position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: #00af95; }
 
-.loading .anima { -webkit-transform-style: preserve-3d; transform-style: preserve-3d; width: 119px; height: 100px; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; }
+.loading .anima { -webkit-transform-style: preserve-3d; transform-style: preserve-3d; width: 50px; height: 100px; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; }
 
-.loading .anima .circle { -webkit-animation: circlechange 6.4s linear infinite; animation: circlechange 6.4s linear infinite; -webkit-transform: rotateY(0deg) translateZ(500px); transform: rotateY(0deg) translateZ(500px); width: 100px; height: 100px; display: -webkit-box; display: flex; display: -webkit-flex; display: -ms-flexbox; -webkit-align-items: center; align-items: center; -webkit-box-align: center; -webkit-justify-content: center; justify-content: center; -webkit-box-pack: center; -ms-flex-pack: center; position: absolute; top: 0; left: 0; margin: 0 10px; background: #fff; border-radius: 50%; font-size: 20px; }
+.loading .anima .circle { -webkit-animation: circlechange 0.6s linear infinite; animation: circlechange 0.6s linear infinite; -webkit-transform: rotateY(0deg) translateZ(20px); transform: rotateY(0deg) translateZ(20px); width: 10px; height: 10px; display: -webkit-box; display: flex; display: -webkit-flex; display: -ms-flexbox; -webkit-align-items: center; align-items: center; -webkit-box-align: center; -webkit-justify-content: center; justify-content: center; -webkit-box-pack: center; -ms-flex-pack: center; position: absolute; top: 0; left: 0; margin: 0 10px; background: #fff; border-radius: 50%; font-size: 20px; }
 
-.loading .anima .circle0 { -webkit-animation-delay: 0.2s; animation-delay: 0.2s; z-index: 9; }
+.loading .anima .circle0 { z-index: 9; background: #ff0000; }
 
-.loading .anima .circle1 { -webkit-animation-delay: 1.6s; animation-delay: 1.6s; z-index: 8; }
+.loading .anima .circle1 { -webkit-animation-delay: 0.2s; animation-delay: 0.2s; z-index: 8; background: #00ff00; }
 
-.loading .anima .circle2 { -webkit-animation-delay: 3.2s; animation-delay: 3.2s; z-index: 7; }
+.loading .anima .circle2 { -webkit-animation-delay: 0.4s; animation-delay: 0.4s; z-index: 7; background: #f5ab3d; }
 
-.loading .anima .circle3 { -webkit-animation-delay: 4.8s; animation-delay: 4.8s; z-index: 6; }
+@keyframes circlechange { from { -webkit-transform: rotateY(0deg) translateZ(20px);
+    transform: rotateY(0deg) translateZ(20px); }
+  to { -webkit-transform: rotateY(360deg) translateZ(20px);
+    transform: rotateY(360deg) translateZ(20px); } }
 
-.loading .anima .circle4 { -webkit-animation-delay: 6.4s; animation-delay: 6.4s; z-index: 5; }
+@-webkit-keyframes circlechange { from { -webkit-transform: rotateY(0deg) translateZ(20px);
+    transform: rotateY(0deg) translateZ(20px); }
+  to { -webkit-transform: rotateY(360deg) translateZ(20px);
+    transform: rotateY(360deg) translateZ(20px); } }
 
-.loading .anima .circle5 { -webkit-animation-delay: 8s; animation-delay: 8s; z-index: 4; }
+@-moz-keyframes circlechange { from { -webkit-transform: rotateY(0deg) translateZ(20px);
+    transform: rotateY(0deg) translateZ(20px); }
+  to { -webkit-transform: rotateY(360deg) translateZ(20px);
+    transform: rotateY(360deg) translateZ(20px); } }
 
-.loading .anima .circle6 { -webkit-animation-delay: 9.6s; animation-delay: 9.6s; z-index: 3; }
+@-o-keyframes circlechange { from { -webkit-transform: rotateY(0deg) translateZ(20px);
+    transform: rotateY(0deg) translateZ(20px); }
+  to { -webkit-transform: rotateY(360deg) translateZ(20px);
+    transform: rotateY(360deg) translateZ(20px); } }
 
-.loading .anima .circle7 { -webkit-animation-delay: 11.2s; animation-delay: 11.2s; z-index: 2; }
+@keyframes displayhide { from { opacity: 1; }
+  to { opacity: 0; } }
 
-.loading .anima .circle8 { -webkit-animation-delay: 12.8s; animation-delay: 12.8s; z-index: 1; }
+@-webkit-keyframes displayhide { from { opacity: 1; }
+  to { opacity: 0; } }
 
-@keyframes circlebig { 0% { width: 50px;
-    height: 50px; }
-  50% { width: 10px;
-    height: 10px; }
-  100% { width: 50px;
-    height: 50px; } }
+@-moz-keyframes displayhide { from { opacity: 1; }
+  to { opacity: 0; } }
 
-@-webkit-keyframes circlebig { 0% { width: 50px;
-    height: 50px; }
-  50% { width: 10px;
-    height: 10px; }
-  100% { width: 50px;
-    height: 50px; } }
+@-o-keyframes displayhide { from { opacity: 1; }
+  to { opacity: 0; } }
 
-@-moz-keyframes circlebig { 0% { width: 50px;
-    height: 50px; }
-  50% { width: 10px;
-    height: 10px; }
-  100% { width: 50px;
-    height: 50px; } }
+@keyframes displayshow { from { opacity: 0; }
+  to { opacity: 1; } }
 
-@-o-keyframes circlebig { 0% { width: 50px;
-    height: 50px; }
-  50% { width: 10px;
-    height: 10px; }
-  100% { width: 50px;
-    height: 50px; } }
+@-webkit-keyframes displayshow { from { opacity: 0; }
+  to { opacity: 1; } }
 
-@keyframes circlechange { from { -webkit-transform: rotateY(0deg) translateZ(500px);
-    transform: rotateY(0deg) translateZ(500px); }
-  to { -webkit-transform: rotateY(360deg) translateZ(500px);
-    transform: rotateY(360deg) translateZ(500px); } }
+@-moz-keyframes displayshow { from { opacity: 0; }
+  to { opacity: 1; } }
 
-@-webkit-keyframes circlechange { from { -webkit-transform: rotateY(0deg) translateZ(500px);
-    transform: rotateY(0deg) translateZ(500px); }
-  to { -webkit-transform: rotateY(360deg) translateZ(500px);
-    transform: rotateY(360deg) translateZ(500px); } }
-
-@-moz-keyframes circlechange { from { -webkit-transform: rotateY(0deg) translateZ(500px);
-    transform: rotateY(0deg) translateZ(500px); }
-  to { -webkit-transform: rotateY(360deg) translateZ(500px);
-    transform: rotateY(360deg) translateZ(500px); } }
-
-@-o-keyframes circlechange { from { -webkit-transform: rotateY(0deg) translateZ(500px);
-    transform: rotateY(0deg) translateZ(500px); }
-  to { -webkit-transform: rotateY(360deg) translateZ(500px);
-    transform: rotateY(360deg) translateZ(500px); } }
+@-o-keyframes displayshow { from { opacity: 0; }
+  to { opacity: 1; } }
 
 /*简历部分*/
-.ready { max-width: 1024px; margin: 0 auto; }
+.ready { -webkit-animation: displayshow 4s linear forwards; animation: displayshow 4s linear forwards; max-width: 760px; margin: 0 auto; }
 
-.m-main { display: -webkit-box; display: flex; display: -webkit-flex; display: -ms-flexbox; -webkit-align-items: center; align-items: center; -webkit-box-align: center; margin-bottom: 20px; }
+.h3-name { font-size: 18px; font-weight: bold; line-height: 50px; }
 
-.main-tit { width: 200px; }
+.self-info { display: -webkit-box; display: flex; display: -webkit-flex; display: -ms-flexbox; -webkit-justify-content: space-between; justify-content: space-between; -webkit-box-pack: space-between; -ms-flex-pack: space-between; width: 100%; }
+
+.m-main { display: -webkit-box; display: flex; display: -webkit-flex; display: -ms-flexbox; -webkit-align-items: center; align-items: center; -webkit-box-align: center; margin: 10px 0; border: 1px solid #bfbfbf; }
+
+.main-tit { width: 80px; text-align: center; }
+
+.main-cont { -webkit-flex: 1; flex: 1; padding: 0 15px; border-left: 1px solid #bfbfbf; }
+
+.main-cont li { margin: 3px 0; }
+
+.main-cont .listwrap { line-height: 18px; margin: 5px 0; }
+
+.main-cont .listwrap .emtit { font-weight: bold; font-size: 16px; color: #313131; margin: 5px 0; }
+
+.main-cont .listwrap dd { display: -webkit-box; display: flex; display: -webkit-flex; display: -ms-flexbox; -webkit-align-items: flex-start; align-items: flex-start; margin: 5px 0; }
+
+.main-cont .listwrap dd span { position: relative; padding-left: 29px; }
+
+.main-cont .listwrap dd span::before { width: 5px; height: 5px; content: ''; position: absolute; left: 15px; top: 8px; border-radius: 50%; background: #313131; }
+
+.main-cont .listwrap dd aside { -webkit-flex: 1; flex: 1; }
+
+.pad-more { padding-top: 5px; padding-bottom: 5px; }
+
+.star { width: 0px; height: 0px; -webkit-transform: rotate(36deg); transform: rotate(36deg); position: relative; display: inline-block; margin: 7px 2px 0 0; border-bottom: 4px solid #313131; border-left: 5px solid transparent; border-right: 5px solid transparent; }
+
+.star::after { width: 0px; height: 0px; -webkit-transform: rotate(-35deg); transform: rotate(-35deg); position: absolute; display: inline-block; left: -4px; top: -2px; content: ""; border-bottom: 4px solid #313131; border-left: 2px solid transparent; border-right: 2px solid transparent; }
+
+.star::before { width: 0px; height: 0px; -webkit-transform: rotate(-75deg); transform: rotate(-75deg); position: absolute; display: inline-block; top: 0.4px; left: -5.5px; color: #313131; content: ""; border-bottom: 4px solid #313131; border-left: 5px solid transparent; border-right: 5px solid transparent; }
+
+.starlist li { display: -webkit-box; display: flex; display: -webkit-flex; display: -ms-flexbox; -webkit-align-items: flex-start; align-items: flex-start; }

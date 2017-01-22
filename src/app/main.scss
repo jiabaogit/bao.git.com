@@ -1,11 +1,16 @@
 @import "commounal/_communal.scss";
 @charset "utf-8";
+$borderColor : #bfbfbf;
+$starColor : #313131;
+$aColor : #8bc0f4;
+
 *{margin:0;padding:0;box-sizing: border-box;}
-body{font-family:"Microsoft YaHei","宋体",sans-serif;font-size:13px;font-weight: normal;}
-ul,li{list-style-type:none;margin: 0px;}
-body a{color:#787878;text-decoration:none;cursor: pointer;font-size: 14px;}
-body a:hover{color:#00af95;}
-body a:visited{color:#787878;}
+body { font: normal 14px "Microsoft YaHei","宋体",sans-serif; }
+ul,li{list-style-type:none;margin: 0px;line-height: 18px;}
+body a{color:$aColor;text-decoration:none;cursor: pointer;font-size: 14px;}
+body a:hover{color:$aColor;}
+body a:active{color: $aColor}
+body a:visited{color:$aColor;}
 img {border:0;-ms-interpolation-mode: bicubic;vertical-align:middle}
 button{cursor: pointer;}
 input,button{outline: 0 none;resize:none;}
@@ -23,11 +28,13 @@ html,body{-webkit-text-size-adjust: 100%;-webkit-tap-highlight-color: rgba(0, 0,
 .pointer{cursor: pointer;}
 .pull-left{float: left;width: 50%;}
 .overHide{overflow: hidden;}
+.bold{font-weight: bold;font-size: 16px;line-height: 25px;}
 
 /*加载层*/
-$second : 1.6s;
+$second : 0.2s;
 .loading{
-  @include css3(perspective,2000px);
+  @include css3(perspective,500px);
+  @include css3(animation,displayhide 2s linear forwards);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -36,7 +43,7 @@ $second : 1.6s;
   background: #00af95;
   .anima{
     @include css3(transform-style,preserve-3d);
-    @include setWdHgPx(119,100);
+    @include setWdHgPx(50,100);
     position: absolute;
     left: 0;
     right: 0;
@@ -44,9 +51,9 @@ $second : 1.6s;
     bottom: 0;
     margin: auto;
     .circle{
-      @include css3(animation,circlechange $second*4 linear infinite);
-      @include css3(transform,rotateY(0deg) translateZ(500px));
-      @include setWdHgPx(100,100);
+      @include css3(animation,circlechange $second*3 linear infinite);
+      @include css3(transform,rotateY(0deg) translateZ(20px));
+      @include setWdHgPx(10,10);
       @include flex;
       @include css3(align-items,center);
       @include css3(justify-content,center);
@@ -59,79 +66,161 @@ $second : 1.6s;
       font-size: 20px;
     }
     .circle0{
-      @include css3(animation-delay,0.2s);
       z-index: 9;
+      background: #ff0000;
     }
     .circle1{
-      @include css3(animation-delay,$second*1);
-      z-index: 8
+      @include css3(animation-delay,$second);
+      z-index: 8;
+      background : #00ff00;
     }
     .circle2{
       @include css3(animation-delay,$second*2);
       z-index: 7;
+      background: #f5ab3d;
     }
-    .circle3{
-      @include css3(animation-delay,$second*3);
-      z-index: 6;
-    }
-    .circle4{
-      @include css3(animation-delay,$second*4);
-      z-index: 5;
-    }
-    .circle5{
-      @include css3(animation-delay,$second*5);
-      z-index: 4;
-    }
-    .circle6{
-      @include css3(animation-delay,$second*6);
-      z-index: 3;
-    }
-    .circle7{
-      @include css3(animation-delay,$second*7);
-      z-index: 2;
-    }
-    .circle8{
-      @include css3(animation-delay,$second*8);
-      z-index: 1;
-    }
-  }
-}
-
-@include keyframes(circlebig){
-  0% {
-    @include setWdHgPx(50,50)
-  }
-  50%{
-    @include setWdHgPx(10,10)
-  }
-  100%{
-    @include setWdHgPx(50,50);
   }
 }
 @include keyframes(circlechange){
   from {
-    @include css3(transform,rotateY(0deg) translateZ(500px))
+    @include css3(transform,rotateY(0deg) translateZ(20px))
   }
   to{
-    @include css3(transform,rotateY(360deg) translateZ(500px))
+    @include css3(transform,rotateY(360deg) translateZ(20px))
+  }
+}
+
+@include keyframes(displayhide){
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+
+@include keyframes(displayshow){
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
   }
 }
 
 
 /*简历部分*/
-.h3{
-  line-height: 50px;
-  
-}
 .ready{
-    max-width: 1024px;
+    @include css3(animation,displayshow 4s linear forwards);
+    max-width: 760px;
     margin: 0 auto;
+}
+.h3-name{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 50px;
+}
+.self-info{
+  @include flex;
+  @include css3(justify-content,space-between);
+  width: 100%;
+
 }
 .m-main{
     @include flex;
     @include css3(align-items,center);
-    margin-bottom: 20px;
+    margin: 10px 0;
+    border: 1px solid $borderColor;
 }
 .main-tit{
-    width: 200px;
+    width: 80px;
+    text-align: center;
+}
+.main-cont{
+    @include css3(flex,1);
+    padding: 0 15px;
+    border-left : 1px solid $borderColor;
+
+    li{
+        margin: 3px 0;
+    }
+    .listwrap{
+        line-height: 18px;
+        margin: 5px 0;
+
+        .emtit{
+            font-weight: bold;
+            font-size: 16px;
+            color : #313131;
+            margin: 5px 0;
+        }
+
+        dd{
+            @include flex;
+            @include css3(align-items,flex-start);
+            margin: 5px 0;
+            span{
+                position: relative;
+                padding-left: 29px;
+            }
+            span::before{
+                @include setWdHgPx(5,5);
+                content : '';
+                position: absolute;
+                left: 15px;
+                top: 8px;
+                border-radius: 50%;
+                background: #313131;
+
+
+            }
+            aside{
+                @include css3(flex,1);
+            }
+
+        }
+    }
+}
+.pad-more{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.star{
+  @include setWdHgPx(0,0);
+  @include css3(transform,rotate(36deg));
+  position: relative;
+  display: inline-block;
+  margin: 7px 2px 0 0;
+  border-bottom: 4px solid $starColor;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.star::after{
+  @include setWdHgPx(0,0);
+  @include css3(transform,rotate(-35deg));
+  position: absolute;
+  display: inline-block;
+  left: -4px;
+  top:-2px;
+  content: "";
+  border-bottom: 4px solid $starColor;
+  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
+}
+.star::before{
+  @include setWdHgPx(0,0);
+  @include css3(transform,rotate(-75deg));
+  position: absolute;
+  display: inline-block;
+  top: 0.4px;
+  left: -5.5px;
+  color: $starColor;
+  content: "";
+  border-bottom: 4px solid $starColor;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+.starlist li{
+  @include flex;
+  @include css3(align-items,flex-start);
 }
