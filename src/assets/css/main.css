@@ -49,7 +49,7 @@ html, body { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transp
 /*加载层*/
 .loading { -webkit-perspective: 500px; perspective: 500px; -webkit-animation: displayhide 2s linear forwards; animation: displayhide 2s linear forwards; position: fixed; top: 0; bottom: 0; left: 0; right: 0; background: #00af95; }
 
-.loading .anima { -webkit-transform-style: preserve-3d; transform-style: preserve-3d; width: 50px; height: 100px; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; }
+.loading .anima { -webkit-transform-style: preserve-3d; transform-style: preserve-3d; width: 50px; height: 10px; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; }
 
 .loading .anima .circle { -webkit-animation: circlechange 0.6s linear infinite; animation: circlechange 0.6s linear infinite; -webkit-transform: rotateY(0deg) translateZ(20px); transform: rotateY(0deg) translateZ(20px); width: 10px; height: 10px; display: -webkit-box; display: flex; display: -webkit-flex; display: -ms-flexbox; -webkit-align-items: center; align-items: center; -webkit-box-align: center; -webkit-justify-content: center; justify-content: center; -webkit-box-pack: center; -ms-flex-pack: center; position: absolute; top: 0; left: 0; margin: 0 10px; background: #fff; border-radius: 50%; font-size: 20px; }
 

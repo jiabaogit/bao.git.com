@@ -43,7 +43,7 @@ $second : 0.2s;
   background: #00af95;
   .anima{
     @include css3(transform-style,preserve-3d);
-    @include setWdHgPx(50,100);
+    @include setWdHgPx(50,10);
     position: absolute;
     left: 0;
     right: 0;
